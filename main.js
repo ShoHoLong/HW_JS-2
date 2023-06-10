@@ -100,3 +100,35 @@ function tinhthuethunhapcanhan() {
 }
 
 //Bài 4
+
+function tinhtiencap() {
+    var soConnect = parseInt(document.getElementById("soKetNoi").value);
+    var tienKetNoi = 0;
+    if (soConnect >= 0 && soConnect <= 10){
+        tienKetNoi = soConnect*7.5;
+    }
+    else if (soConnect > 10){
+        tienKetNoi = 75 + (soConnect - 10)*5;
+    }
+	var kenhCaoCap = parseInt(document.getElementById("soKenhCaoCap").value);
+	var loaiKhachHang = document.getElementById("loaiKhachHang");
+	var tongtiencap = 0;
+	if (loaiKhachHang.value === "Nhà dân") {
+		tongtiencap = 4.5 + 20.5 + kenhCaoCap * 7.5;
+        document.getElementById("soConnect").style.display = "none";
+	} else if (loaiKhachHang.value === "Doanh nghiệp") {
+		document.getElementById("soConnect").style.display = "block";
+        tongtiencap = 15 + 50 * kenhCaoCap + tienKetNoi;
+	}
+	document.getElementById("tongtiencap").innerHTML = "Tổng số tiền: " + tongtiencap + "$";
+}
+
+// hàm hiển thị input để điền số kết nối
+function hiensoketnoi(){
+    if (document.getElementById("loaiKhachHang").value === "Nhà dân"){
+        document.getElementById("soConnect").style.display = "none";
+    }
+    else if (document.getElementById("loaiKhachHang").value === "Doanh nghiệp"){
+        document.getElementById("soConnect").style.display = "block";
+    }
+}

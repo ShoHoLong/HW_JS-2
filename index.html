@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <h3>Bài 1 em tính làm cái đối tượng dự thi với khu vực làm giống với bài 4 là select option nhưng mà em lười sửa quá ạ, làm xong hết mới nhận ra :< thông cảm nhập tay bài 1 giúp em ạ</h1>
     <!-- BÀI 1 -->
     <div class="container">
         <div class="card w-50">
@@ -102,7 +103,41 @@
     <hr>
 
     <!-- BÀI 4 -->
-
+    <div class="container">
+        <div class="card w-50">
+            <div class="card-header bg-dark text-white">
+                <h3 class="text-center">TÍNH THUẾ THU NHẬP CÁ NHÂN</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <p>Mã khách hàng</p>
+                    <input type="text" class="form-control">
+                    <form action="" class="my-3" onclick="hiensoketnoi()">
+                        Loại khách hàng
+                        <select name="" id="loaiKhachHang">
+                            <option>--select--</option>
+                            <option>Nhà dân</option>
+                            <option>Doanh nghiệp</option>
+                        </select>
+                    </form>
+                    <div id="soConnect" style="display: none;">
+                        <p>Số kết nối</p>
+                        <input type="text" class="form-control" id="soKetNoi">
+                    </div>
+                    <p>Số kênh cao cấp</p>
+                    <input type="text" class="form-control" id="soKenhCaoCap">
+                </div>
+                <div class="card-footer text-center">
+                    <button onclick="tinhtiencap()" class="btn btn-success">Số tiền</button>
+                    <div class="mt-2 text-center">
+                        <br>
+                        <span id="tongtiencap"></span>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
