@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <title>Title</title>
     <!-- Required meta tags -->
@@ -7,16 +8,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+
 <body>
+    <!-- BÀI 1 -->
+    <div class="container">
+        <div class="card w-50">
+            <div class="card-header bg-dark text-white">
+                <h3 class="text-center">QUẢN LÝ TUYỂN SINH</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <p>Khu vực</p>
+                    <input type="text" class="form-control" id="khuVuc">
+                    <p>Đối tượng dự thi</p>
+                    <input type="text" class="form-control" id="doiTuong">
+                    <p>Điểm chuẩn</p>
+                    <input type="text" class="form-control" id="diemChuan">
+                    <p>Điểm môn 1</p>
+                    <input type="text" class="form-control" id="mon1">
+                    <p>Điểm môn 2</p>
+                    <input type="text" class="form-control" id="mon2">
+                    <p>Điểm môn 3</p>
+                    <input type="text" class="form-control" id="mon3">
+                </div>
+                <div class="card-footer text-center">
+                    <button onclick="ketquatuyensinh()" class="btn btn-success">Kết quả</button>
+                    <div class="mt-2 text-center">
+                        <br>
+                        <span id="ketquathi"></span>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- BÀI 2 -->
+    <div class="container">
+        <div class="card w-50">
+            <div class="card-header bg-dark text-white">
+                <h3 class="text-center">TÍNH TIỀN ĐIỆN</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <p>Tên</p>
+                    <input type="text" class="form-control">
+                    <p>Số kW</p>
+                    <input type="text" class="form-control" id="soKW">
+                </div>
+                <div class="card-footer text-center">
+                    <button onclick="tinhtiendien()" class="btn btn-success">Tiền trả</button>
+                    <div class="mt-2 text-center">
+                        <br>
+                        <span id="sotienphaitra"></span>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- BÀI 3 -->
+    <div class="container">
+        <div class="card w-50">
+            <div class="card-header bg-dark text-white">
+                <h3 class="text-center">TÍNH THUẾ THU NHẬP CÁ NHÂN</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <p>Họ tên</p>
+                    <input type="text" class="form-control">
+                    <p>Tổng thu nhập năm</p>
+                    <input type="text" class="form-control" id="thuNhap1Nam">
+                    <p>Số người phụ thuộc</p>
+                    <input type="text" class="form-control" id="nguoiPhuThuoc">
+                </div>
+                <div class="card-footer text-center">
+                    <button onclick="tinhthuethunhapcanhan()" class="btn btn-success">Tiền trả</button>
+                    <div class="mt-2 text-center">
+                        <br>
+                        <span id="tienthuephaichiu"></span>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- BÀI 4 -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!-- Main JS -->
-    <script src="./index.html"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- Main js -->
+    <script src="./main.js"></script>
 </body>
+
 </html>
