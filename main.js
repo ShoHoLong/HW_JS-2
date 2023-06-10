@@ -1,3 +1,5 @@
+/** @format */
+
 // Bài 1
 function ketquatuyensinh() {
 	var dKhuVuc = document.getElementById("khuVuc").value;
@@ -69,7 +71,7 @@ function tinhtiendien() {
 			150 * 1100 +
 			(soDienKw - 350) * 1300;
 	}
-	document.getElementById("sotienphaitra").innerHTML = soTienDien;
+	document.getElementById("sotienphaitra").innerHTML = soTienDien + "vnđ";
 }
 
 // Bài 3
@@ -93,7 +95,8 @@ function tinhthuethunhapcanhan() {
 	} else if (thuNhapChiuThue > 960) {
 		thuNhapChiuThue = thuNhapChiuThue * (35 / 100);
 	}
-	document.getElementById("tienthuephaichiu").innerHTML = thuNhapChiuThue;
+	document.getElementById("tienthuephaichiu").innerHTML =
+		thuNhapChiuThue + "vnđ";
 }
 
 //Bài 4
